@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="taglib")
-public class Taglib {
+public class Taglib extends CommonAttribute {
     @Element(name="taglib-uri",required=true)
     private String taglibUri = null;
     @Element(name="taglib-location",required=true)

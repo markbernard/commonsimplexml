@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="resource-env-ref")
-public class ResourceEnvRef {
+public class ResourceEnvRef extends CommonAttribute {
     @Element(name="description",required=false)
     private String description = null;
     @Element(name="resource-env-ref-name",required=true)

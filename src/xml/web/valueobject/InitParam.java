@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="init-param")
-public class InitParam {
+public class InitParam extends CommonAttribute {
     @Element(name="param-name",required=true)
     private String paramName = "";
     @Element(name="param-value",required=true)

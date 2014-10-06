@@ -12,7 +12,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="web-app")
-public class WebApp {
+public class WebApp extends CommonAttribute {
     @Element(name="icon",required=false)
     private Icon icon = null;
     @Element(name="display-name",required=false)

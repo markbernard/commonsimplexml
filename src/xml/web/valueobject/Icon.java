@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="icon")
-public class Icon {
+public class Icon extends CommonAttribute {
     @Element(name="small-icon",required=false)
     private String smallIcon = null;
     @Element(name="large-icon",required=false)

@@ -14,7 +14,7 @@ import xml.web.type.UrlPatternType;
  * @author Mark Bernard
  */
 @Root(name="filter-mapping")
-public class FilterMapping {
+public class FilterMapping extends CommonAttribute {
     @Element(name="filter-name",required=true)
     private String filterName = "";
     @ElementUnion({

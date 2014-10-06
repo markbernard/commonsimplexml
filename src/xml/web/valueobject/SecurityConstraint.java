@@ -12,7 +12,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="security-constraint")
-public class SecurityConstraint {
+public class SecurityConstraint extends CommonAttribute {
     @Element(name="display-name",required=false)
     private String displayName = null;
     @ElementList(name="web-resource-collection",required=true,inline=true)

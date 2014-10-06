@@ -14,7 +14,7 @@ import xml.web.type.StringValueType;
  * @author Mark Bernard
  */
 @Root(name="error-page")
-public class ErrorPage {
+public class ErrorPage extends CommonAttribute {
     @ElementUnion({
         @Element(name="error-code",type=ErrorCodeType.class,required=true),
         @Element(name="exception-type",type=ExceptionTypeType.class,required=true)

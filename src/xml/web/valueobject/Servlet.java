@@ -17,7 +17,7 @@ import xml.web.type.StringValueType;
  * @author Mark Bernard
  */
 @Root(name="servlet")
-public class Servlet {
+public class Servlet extends CommonAttribute {
     @Element(name="servlet-name",required=true)
     private String servletName = "";
     @Element(name="display-name",required=false)

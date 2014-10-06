@@ -77,7 +77,7 @@ public class WebAppTest {
                 getErrorPages(), getTaglibs(), getResourceEnvRefs(), getResourceRefs(), 
                 getSecurityConstraints(), getLoginConfig(), getSecurityRoles(), getEnvEntrys(), 
                 getEjbRefs(), getEjbLocalRefs());
-        
+
         serializer.write(webApp, new OutputStreamWriter(new FileOutputStream(filePath), "UTF-8"));
 
         System.out.println("  End: " + new Date());

@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="listener")
-public class Listener {
+public class Listener extends CommonAttribute {
     @Element(name="listener-class",required=true)
     private String listenerClass = "";
 

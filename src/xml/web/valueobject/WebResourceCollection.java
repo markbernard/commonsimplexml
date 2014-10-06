@@ -12,7 +12,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="web-resource-collection")
-public class WebResourceCollection {
+public class WebResourceCollection extends CommonAttribute {
     @Element(name="web-resource-name",required=true)
     private String webResourceName = null;
     @Element(name="description",required=false)

@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="servlet-mapping")
-public class ServletMapping {
+public class ServletMapping extends CommonAttribute {
     @Element(name="servlet-name",required=true)
     private String servletName = "";
     @Element(name="url-pattern",required=true)

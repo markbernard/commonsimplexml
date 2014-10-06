@@ -12,7 +12,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="filter")
-public class Filter {
+public class Filter extends CommonAttribute {
     @Element(name="icon",required=false)
     private String icon = null;
     @Element(name="filter-name",required=true)

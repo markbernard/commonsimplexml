@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="env-entry")
-public class EnvEntry {
+public class EnvEntry extends CommonAttribute {
     @Element(name="description",required=false)
     private String description = null;
     @Element(name="env-entry-name",required=true)

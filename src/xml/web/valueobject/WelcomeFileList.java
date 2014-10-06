@@ -11,7 +11,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="welcome-file-list")
-public class WelcomeFileList {
+public class WelcomeFileList extends CommonAttribute {
     @Element(name="welcome-file",required=true)
     private List<String> welcomeFiles = null;
 

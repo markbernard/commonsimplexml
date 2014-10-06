@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="mime-mapping")
-public class MimeMapping {
+public class MimeMapping extends CommonAttribute {
     @Element(name="extension",required=true)
     private String extension = "";
     @Element(name="mime-type",required=true)

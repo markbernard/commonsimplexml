@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="security-role")
-public class SecurityRole {
+public class SecurityRole extends CommonAttribute {
     @Element(name="description",required=false)
     private String description = null;
     @Element(name="role-name",required=true)

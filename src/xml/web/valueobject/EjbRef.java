@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  * @author Mark Bernard
  */
 @Root(name="ejb-ref")
-public class EjbRef {
+public class EjbRef extends CommonAttribute {
     @Element(name="description",required=false)
     private String description = null;
     @Element(name="ejb-ref-name",required=true)
