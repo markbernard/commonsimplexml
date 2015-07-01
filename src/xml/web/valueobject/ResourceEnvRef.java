@@ -59,9 +59,9 @@ public class ResourceEnvRef extends CommonAttribute {
     }
 
     public String toString() {
-        return "[description: " + description +
+        return "{description: " + description +
                 ", resourceEnvRefName: " + resourceEnvRefName +
                 ", resourceEnvRefType: " + resourceEnvRefType +
-                "]";
+                "}";
     }
 }

@@ -115,12 +115,12 @@ public class Servlet extends CommonAttribute {
     }
 
     public String toString() {
-        return "[servletName: " + servletName +
+        return "{servletName: " + servletName +
                 ", displayName: " + displayName +
                 ", description: " + description +
                 ", servletClassOrJspFile: " + servletClassOrJspFile +
                 ", initParam: " + initParams +
-                "]";
+                "}";
     }
 
     public boolean equals(Object obj) {

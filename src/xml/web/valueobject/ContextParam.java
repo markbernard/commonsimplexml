@@ -71,10 +71,10 @@ public class ContextParam extends CommonAttribute {
     }
 
     public String toString() {
-        return "[paramName: " + paramName + 
+        return "{paramName: " + paramName + 
                 ", paramValue: " + paramValue +
                 ", description: " + description +
-                "]";
+                "}";
     }
     
     public boolean equals(Object obj) {

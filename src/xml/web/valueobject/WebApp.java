@@ -1,18 +1,28 @@
 package xml.web.valueobject;
 
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
+import org.simpleframework.xml.Serializer;
+import org.simpleframework.xml.core.Persister;
+import org.simpleframework.xml.stream.Format;
 
 /**
  * web.xml root element.
  * 
  * @author Mark Bernard
  */
-@Root(name="web-app")
+@Root(name="web-app", strict=false)
 public class WebApp extends CommonAttribute {
+    @Attribute(name="version")
+    private String version;
     @Element(name="icon",required=false)
     private Icon icon = null;
     @Element(name="display-name",required=false)
@@ -121,6 +131,20 @@ public class WebApp extends CommonAttribute {
         this.envEntrys = envEntrys;
         this.ejbRefs = ejbRefs;
         this.ejbLocalRefs = ejbLocalRefs;
+    }
+
+    /**
+     * @return the version
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
+     * @param version the version to set
+     */
+    public void setVersion(String version) {
+        this.version = version;
     }
 
     /**
@@ -444,9 +468,34 @@ public class WebApp extends CommonAttribute {
     public void setEjbLocalRefs(List<EjbLocalRef> ejbLocalRefs) {
         this.ejbLocalRefs = ejbLocalRefs;
     }
+    
+    /**
+     * Testing 
+     * 
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String... args) throws Exception {
+        System.out.println("Start: " + new Date());
+
+        WebApp webApp = new WebApp();
+        webApp.setVersion("2.5");
+        WelcomeFileList welcomeFileList = new WelcomeFileList();
+        webApp.setWelcomeFileList(welcomeFileList);
+        List<String> welcomeFiles = new ArrayList<>();
+        welcomeFiles.add("index.html");
+        welcomeFileList.setWelcomeFiles(welcomeFiles);
+        
+        Serializer serializer = new Persister(new Format(4, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"));
+        OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream("C:/Users/mark/web.xml"), "UTF-8");
+        serializer.write(webApp, writer);
+        writer.close();
+        
+        System.out.println("  End: " + new Date());
+    }
 
     public String toString() {
-        return "[icon: " + icon +
+        return "{icon: " + icon +
                 ", displayName: " + displayName +
                 ", description: " + description +
                 ", distributable: " + distributable +
@@ -469,6 +518,6 @@ public class WebApp extends CommonAttribute {
                 ", envEntrys: " + envEntrys +
                 ", ejbRefs: " + ejbRefs +
                 ", ejbLocalRefs: " + ejbLocalRefs +
-                "]";
+                "}";
     }
 }

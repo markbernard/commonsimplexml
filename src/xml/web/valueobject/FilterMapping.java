@@ -66,9 +66,9 @@ public class FilterMapping extends CommonAttribute {
     }
 
     public String toString() {
-        return "[filterName: " + filterName +
+        return "{filterName: " + filterName +
                 ", urlPatternOrServletName: " + urlPatternOrServletName +
-                "]";
+                "}";
     }
 
     public boolean equals(Object obj) {

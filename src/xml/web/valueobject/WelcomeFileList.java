@@ -1,8 +1,9 @@
 package xml.web.valueobject;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
 /**
@@ -12,8 +13,8 @@ import org.simpleframework.xml.Root;
  */
 @Root(name="welcome-file-list")
 public class WelcomeFileList extends CommonAttribute {
-    @Element(name="welcome-file",required=true)
-    private List<String> welcomeFiles = null;
+    @ElementList(name="welcome-file",required=true,inline=true)
+    private List<String> welcomeFiles = new ArrayList<>();
 
     /**
      * 
@@ -42,7 +43,7 @@ public class WelcomeFileList extends CommonAttribute {
     }
 
     public String toString() {
-        return "[welcomeFiles: " + welcomeFiles + 
-                "]";
+        return "{welcomeFiles: " + welcomeFiles + 
+                "}";
     }
 }

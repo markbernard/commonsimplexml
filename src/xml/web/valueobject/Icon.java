@@ -55,8 +55,8 @@ public class Icon extends CommonAttribute {
     }
 
     public String toString() {
-        return "[smallIcon: " + smallIcon +
+        return "{smallIcon: " + smallIcon +
                 ", largeIcon: " + largeIcon +
-                "]";
+                "}";
     }
 }

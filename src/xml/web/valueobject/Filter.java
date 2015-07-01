@@ -123,13 +123,13 @@ public class Filter extends CommonAttribute {
 
 
     public String toString() {
-        return "[icon: " + icon + 
+        return "{icon: " + icon + 
                 ", filterName: " + filterName +
                 ", displayName: " + displayName +
                 ", description: " + description +
                 ", filterClass: " + filterClass +
                 ", initParam: " + initParams +
-                "]";
+                "}";
     }
     
     public boolean equals(Object obj) {

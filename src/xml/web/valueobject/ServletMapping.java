@@ -55,9 +55,9 @@ public class ServletMapping extends CommonAttribute {
     }
 
     public String toString() {
-        return "[servletName: " + servletName +
+        return "{servletName: " + servletName +
                 ", urlPattern: " + urlPattern +
-                "]";
+                "}";
     }
 
     public boolean equals(Object obj) {

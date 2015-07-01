@@ -119,12 +119,12 @@ public class EjbRef extends CommonAttribute {
     }
 
     public String toString() {
-        return "[description: " + description +
+        return "{description: " + description +
                 ", ejbRefName: " + ejbRefName +
                 ", ejbRefType: " + ejbRefType +
                 ", home: " + home +
                 ", remote: " + remote +
                 ", ejbLink: " + ejbLink +
-                "]";
+                "}";
     }
 }

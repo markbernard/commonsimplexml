@@ -40,7 +40,7 @@ public class Listener extends CommonAttribute {
     }
 
     public String toString() {
-        return "[listenerClass: " + listenerClass + "]";
+        return "{listenerClass: " + listenerClass + "}";
     }
 
     public boolean equals(Object obj) {

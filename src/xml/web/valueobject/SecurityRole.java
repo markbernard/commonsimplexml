@@ -55,8 +55,8 @@ public class SecurityRole extends CommonAttribute {
     }
 
     public String toString() {
-        return "[description: " + description +
+        return "{description: " + description +
                 ", roleName: " + roleName +
-                "]";
+                "}";
     }
 }

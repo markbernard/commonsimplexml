@@ -91,10 +91,10 @@ public class SecurityConstraint extends CommonAttribute {
     }
 
     public String toString() {
-        return "[displayName: " + displayName +
+        return "{displayName: " + displayName +
                 ", webResourceCollections: " + webResourceCollections +
                 ", authConstraint: " + authConstraint +
                 ", userDataConstraint: " + userDataConstraint +
-                "]";
+                "}";
     }
 }

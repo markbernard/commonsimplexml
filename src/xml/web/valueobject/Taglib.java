@@ -55,8 +55,8 @@ public class Taglib extends CommonAttribute {
     }
 
     public String toString() {
-        return "[taglibUri: " + taglibUri +
+        return "{taglibUri: " + taglibUri +
                 ", taglibLocation: " + taglibLocation +
-                "]";
+                "}";
     }
 }

@@ -103,11 +103,11 @@ public class ResourceRef extends CommonAttribute {
     }
 
     public String toString() {
-        return "[description: " + description +
+        return "{description: " + description +
                 ", resRefName: " + resRefName +
                 ", resType: " + resType +
                 ", resAuth: " + resAuth +
                 ", resSharingScope: " + resSharingScope +
-                "]";
+                "}";
     }
 }

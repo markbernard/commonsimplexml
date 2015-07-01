@@ -55,8 +55,8 @@ public class MimeMapping extends CommonAttribute {
     }
 
     public String toString() {
-        return "[extension: " + extension +
+        return "{extension: " + extension +
                 ", mimeType: " + mimeType +
-                "]";
+                "}";
     }
 }

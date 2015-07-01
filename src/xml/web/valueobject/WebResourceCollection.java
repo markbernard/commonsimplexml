@@ -91,10 +91,10 @@ public class WebResourceCollection extends CommonAttribute {
     }
 
     public String toString() {
-        return "[webResourceName: " + webResourceName +
+        return "{webResourceName: " + webResourceName +
                 ", description: " + description +
                 ", urlPatterns: " + urlPatterns +
                 ", httpMethods: " + httpMethods +
-                "]";
+                "}";
     }
 }

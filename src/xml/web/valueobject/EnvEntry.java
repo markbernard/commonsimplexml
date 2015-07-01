@@ -86,10 +86,10 @@ public class EnvEntry extends CommonAttribute {
     }
 
     public String toString() {
-        return "[description: " + description +
+        return "{description: " + description +
                 ", envEntryName: " + envEntryName +
                 ", envEntryValue: " + envEntryValue +
                 ", envEntryType: " + envEntryType +
-                "]";
+                "}";
     }
 }

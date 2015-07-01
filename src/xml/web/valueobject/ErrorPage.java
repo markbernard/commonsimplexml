@@ -66,8 +66,8 @@ public class ErrorPage extends CommonAttribute {
     }
 
     public String toString() {
-        return "[errorCodeOrExceptionType: " + errorCodeOrExceptionType +
+        return "{errorCodeOrExceptionType: " + errorCodeOrExceptionType +
                 ", location: " + location +
-                "]";
+                "}";
     }
 }
